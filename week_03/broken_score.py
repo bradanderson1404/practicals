@@ -1,6 +1,11 @@
+import random
+
+
 def main():
     score = float(input("Enter score: "))
     print(determine_result(score))
+    random_score = random.randrange(0, 100)
+    print(random_score, determine_result(random_score))
 
 
 def determine_result(score):
@@ -12,6 +17,8 @@ def determine_result(score):
         return "Passable"
     else:
         return "Bad"
+
+
 
 
 main()
