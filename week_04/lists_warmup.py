@@ -30,3 +30,21 @@ if "3" not in numbers:
 # numbers + [6, 5, 3] would append these values to the end of the list
 numbers += [6, 5, 3]
 print(numbers)
+
+# 1. Change first element of numbers to the string "ten"
+numbers[0] = "ten"
+print(numbers)
+
+# 2. change last element of numbers to 1
+numbers[-1] = 1
+print(numbers)
+
+# 3. get all the elements from numbers except the first two
+elements = numbers[2:]
+print(elements)
+
+# 4. check if 9 is an element of numbers
+if 9 in numbers:
+    print("True")
+else:
+    print("False")
