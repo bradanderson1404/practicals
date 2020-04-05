@@ -6,7 +6,9 @@ File needs reformatting
 
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
                 "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
-print(CODE_TO_NAME)
+
+for key in CODE_TO_NAME:
+    print("{:>3s} is {}".format(key, CODE_TO_NAME[key]))
 
 state_code = input("Enter short state: ")
 while state_code != "":
