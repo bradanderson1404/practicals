@@ -6,14 +6,17 @@ while email != "" and "@" in email:
     if "." in name_portion:
         name = name_portion.split(".")
         full_name = " ".join(name)
-        prompt = input("Is your name {}? Y/N".format(name))
-        while prompt.upper() == "N":
+        prompt = input("Is your name {}? Y/N".format(full_name))
+        if prompt.upper() == "N":
             full_name = input("Enter your name: ")
         user_details[email] = full_name
     else:
-        name = name_portion
-        prompt = input("Is your name {}? Y/N".format(name))
-        while prompt.upper() == "N":
+        full_name = name_portion
+        prompt = input("Is your name {}? Y/N".format(full_name))
+        if prompt.upper() == "N":
             full_name = input("Enter your name: ")
-        user_details[email] = name
+        user_details[email] = full_name
+    email = input("Enter your email: ")
 
+for key in user_details:
+    print("{} - ({})".format(user_details[key], key))
