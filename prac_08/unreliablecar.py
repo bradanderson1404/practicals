@@ -1,5 +1,5 @@
+from random import randint
 from prac_08.car import Car
-import random
 
 
 class UnreliableCar(Car):
@@ -12,9 +12,8 @@ class UnreliableCar(Car):
         return "{}".format(super().__str__())
 
     def drive(self, distance):
-        reliability_check = random.randint(0-100)
+        reliability_check = randint(1, 100)
         if reliability_check >= self.reliability:
-            distance_driven = 0
-        else:
-            distance_driven = super().drive(distance)
+            distance = 0
+        distance_driven = super().drive(distance)
         return distance_driven
